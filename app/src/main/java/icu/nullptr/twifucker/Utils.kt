@@ -56,7 +56,7 @@ fun writeJsonLog(content: String) {
     try {
         if (!logFileDir.exists()) logFileDir.mkdirs()
         if (!logJsonFile.exists()) logJsonFile.createNewFile()
-        logJsonFile.appendText(content + "\n")
+        logJsonFile.appendText(content + ",\n")
     } catch (t: Throwable) {
         Log.e(t)
     }
