@@ -451,7 +451,7 @@ object JsonHook : BaseHook() {
             val json = JSONObject(content)
             
             json.jsonGetNotifications()?.tweetsForEach {notifications ->
-                writeJsonLog(notifications)
+                writeJsonLog(notifications.toString()+",,")
             }
 
             json.jsonGetTweets()?.tweetsForEach { tweet ->
