@@ -7,6 +7,7 @@ import com.github.kyuubiran.ezxhelper.finders.FieldFinder
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import icu.nullptr.twifucker.afterMeasure
 import icu.nullptr.twifucker.isEntryNeedsRemove
+import icu.nullptr.twifucker.writeJsonLog
 
 object JsonTimelineEntryHook : BaseHook() {
     override val name: String
@@ -28,6 +29,7 @@ object JsonTimelineEntryHook : BaseHook() {
                 afterMeasure(name) { param ->
                     param.result ?: return@afterMeasure
                     val entryId = entryIdField.get(param.result) as String
+                    writeJsonLog(param.result.toString()+"")
                     if (isEntryNeedsRemove(entryId)) {
                         contentField.set(param.result, null)
                         Log.d("Remove timeline entry item: $entryId")
