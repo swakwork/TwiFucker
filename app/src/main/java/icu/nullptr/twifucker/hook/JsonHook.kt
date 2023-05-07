@@ -51,6 +51,9 @@ object JsonHook : BaseHook() {
 
     // root
     private fun JSONObject.jsonGetTweets(): JSONObject? =
+        optJSONObject("globalObjects")?.optJSONObject("notifications")
+    
+    private fun JSONObject.jsonGetNotifications(): JSONObject? =
         optJSONObject("globalObjects")?.optJSONObject("tweets")
 
     private fun JSONObject.jsonGetInstructions(): JSONArray? =
@@ -122,6 +125,12 @@ object JsonHook : BaseHook() {
     // tweet
     private fun JSONObject.tweetGetExtendedEntitiesMedias(): JSONArray? =
         optJSONObject("extended_entities")?.optJSONArray("media")
+
+    private fun JSONObject.notificationCheckAndRemove() {
+        tweetGetExtendedEntitiesMedias()?.forEach { media ->
+            media.mediaCheckAndRemove()
+        }
+    }
 
     private fun JSONObject.tweetCheckAndRemove() {
         tweetGetExtendedEntitiesMedias()?.forEach { media ->
@@ -441,7 +450,9 @@ object JsonHook : BaseHook() {
         try {
             val json = JSONObject(content)
             
-            
+            json.jsonGetNotifications()?.tweetsForEach {notifications ->
+                writeJsonLog(notifications)
+            }
 
             json.jsonGetTweets()?.tweetsForEach { tweet ->
                 tweet.tweetCheckAndRemove()
