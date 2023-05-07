@@ -8,7 +8,7 @@ import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import icu.nullptr.twifucker.afterMeasure
 import icu.nullptr.twifucker.isEntryNeedsRemove
 
-object JsonTimelineEntryHook : BaseHook() {
+object JsonNotificationsTabHook : BaseHook() {
     override val name: String
         get() = "JsonNotificationsTabHook"
 
