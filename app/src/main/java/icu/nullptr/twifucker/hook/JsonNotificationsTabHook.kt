@@ -10,13 +10,13 @@ import icu.nullptr.twifucker.isEntryNeedsRemove
 
 object JsonTimelineEntryHook : BaseHook() {
     override val name: String
-        get() = "TimelineEntryHook"
+        get() = "JsonNotificationsTabHook"
 
     override fun init() {
         val jsonTimelineEntryClass =
-            loadClass("com.twitter.model.json.timeline.urt.JsonTimelineEntry")
+            loadClass("com.twitter.model.json.notificationstab")
         val jsonTimelineEntryMapperClass =
-            loadClass("com.twitter.model.json.timeline.urt.JsonTimelineEntry\$\$JsonObjectMapper")
+            loadClass("com.twitter.model.json.notificationstab\$\$JsonObjectMapper")
 
         val entryIdField =
             FieldFinder.fromClass(jsonTimelineEntryClass).filterByType(String::class.java).first()
@@ -27,14 +27,14 @@ object JsonTimelineEntryHook : BaseHook() {
             .filterByReturnType(jsonTimelineEntryClass).first().createHook {
                 afterMeasure(name) { param ->
                     param.result ?: return@afterMeasure
-                    val entryId = entryIdField.get(param.result) as String
+                    // val entryId = entryIdField.get(param.result) as String
                     Log.i("Swak: "+entryIdField)
                     Log.i("Swak: "+contentField)
-                    Log.i("Swak: "+entryId)
-                    if (isEntryNeedsRemove(entryId)) {
-                        contentField.set(param.result, null)
-                        Log.d("Remove timeline entry item: $entryId")
-                    }
+                    // Log.i("Swak: "+entryId)
+                    // if (isEntryNeedsRemove(entryId)) {
+                    //     contentField.set(param.result, null)
+                    //     Log.d("Remove timeline entry item: $entryId")
+                    // }
                 }
             }
     }
