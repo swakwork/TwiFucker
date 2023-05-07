@@ -28,7 +28,8 @@ object JsonTimelineEntryHook : BaseHook() {
                 afterMeasure(name) { param ->
                     param.result ?: return@afterMeasure
                     val entryId = entryIdField.get(param.result) as String
-                    Log.i("Swak: "+param.result.toString())
+                    Log.i("Swak: "+param.result)
+                    Log.i("Swak: "+entryId)
                     if (isEntryNeedsRemove(entryId)) {
                         contentField.set(param.result, null)
                         Log.d("Remove timeline entry item: $entryId")
