@@ -12,6 +12,7 @@
     <string name="settings_dismiss">dismiss</string>
     <string name="settings_general">General</string>
     <string name="settings_main">Main</string>
+    <string name="settings_notification">Notifications</string>
     <string name="settings_extra">Extra</string>
     <string name="settings_experimental">Experimental</string>
     <string name="settings_logging">Logging</string>
@@ -79,4 +80,10 @@
     <string name="feature_switch_value_boolean">Boolean</string>
     <string name="feature_switch_value_decimal">Decimal</string>
     <string name="feature_switch_bool_label">Force True</string>
+
+    <string name="disable_like_notification_title">Disable like notifications</string>
+    <string name="disable_follow_notification_title">Disable follow notifications</string>
+    <string name="disable_alert_notification_title">Disable alert notifications</string>
+    <string name="disable_retweet_notification_title">Disable retweet notifications</string>
+    <string name="disable_subscribe_notification_title">Disable subscribe notifications</string>
 </resources>

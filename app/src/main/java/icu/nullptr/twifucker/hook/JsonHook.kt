@@ -440,6 +440,8 @@ object JsonHook : BaseHook() {
 
         try {
             val json = JSONObject(content)
+            
+            
 
             json.jsonGetTweets()?.tweetsForEach { tweet ->
                 tweet.tweetCheckAndRemove()

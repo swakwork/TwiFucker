@@ -45,6 +45,24 @@
             android:title="@string/disable_recommended_users" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/settings_notification">
+        <SwitchPreference
+            android:key="disable_like_notification"
+            android:title="@string/disable_like_notification_title" />
+        <SwitchPreference
+            android:key="disable_follow_notification"
+            android:title="@string/disable_follow_notification_title" />
+        <SwitchPreference
+            android:key="disable_alert_notification"
+            android:title="@string/disable_alert_notification_title" />
+        <SwitchPreference
+            android:key="disable_retweet_notification"
+            android:title="@string/disable_retweet_notification_title" />
+        <SwitchPreference
+            android:key="disable_subscribe_notification"
+            android:title="@string/disable_subscribe_notification_title" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/settings_extra">
         <SwitchPreference
             android:key="disable_who_to_follow"
