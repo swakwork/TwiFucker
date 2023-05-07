@@ -14,23 +14,23 @@ object JsonNotificationsTabHook : BaseHook() {
 
     override fun init() {
         val jsonNotificationEntryClass =
-            loadClass("com.twitter.model.json.notificationstab")
+            loadClass("com.twitter.model.json.notificationstab.JsonNotification")
         val jsonNotiicationEntryMapperClass =
-            loadClass("com.twitter.model.json.notificationstab\$\$JsonObjectMapper")
+            loadClass("com.twitter.model.json.notificationstab.JsonNotification\$\$JsonObjectMapper")
 
         val entryIdField =
             FieldFinder.fromClass(jsonNotificationEntryClass).filterByType(String::class.java).first()
         val contentField =
             FieldFinder.fromClass(jsonNotificationEntryClass).filter { type.isInterface }.first()
-
+        Log.i("SwakN: "+entryIdField)
+        Log.i("SwakB: "+contentField)
         MethodFinder.fromClass(jsonNotiicationEntryMapperClass).filterByName("_parse")
             .filterByReturnType(jsonNotificationEntryClass).first().createHook {
                 afterMeasure(name) { param ->
                     param.result ?: return@afterMeasure
-                    // val entryId = entryIdField.get(param.result) as String
-                    Log.i("Swak: "+entryIdField)
-                    Log.i("Swak: "+contentField)
-                    // Log.i("Swak: "+entryId)
+                    val entryId = entryIdField.get(param.result) as String
+                    
+                    Log.i("SwakN: "+entryId)
                     // if (isEntryNeedsRemove(entryId)) {
                     //     contentField.set(param.result, null)
                     //     Log.d("Remove timeline entry item: $entryId")
