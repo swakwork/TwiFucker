@@ -51,10 +51,10 @@ object JsonHook : BaseHook() {
 
     // root
     private fun JSONObject.jsonGetTweets(): JSONObject? =
-        optJSONObject("globalObjects")?.optJSONObject("notifications")
+        optJSONObject("globalObjects")?.optJSONObject("tweets")
     
     private fun JSONObject.jsonGetNotifications(): JSONObject? =
-        optJSONObject("globalObjects")?.optJSONObject("tweets")
+        optJSONObject("globalObjects")?.optJSONObject("notifications")
 
     private fun JSONObject.jsonGetInstructions(): JSONArray? =
         optJSONObject("timeline")?.optJSONArray("instructions")
@@ -451,7 +451,7 @@ object JsonHook : BaseHook() {
             val json = JSONObject(content)
             
             json.jsonGetNotifications()?.tweetsForEach {notifications ->
-                writeJsonLog(notifications.toString()+",,")
+                writeJsonLog(notifications.toString())
             }
 
             json.jsonGetTweets()?.tweetsForEach { tweet ->
