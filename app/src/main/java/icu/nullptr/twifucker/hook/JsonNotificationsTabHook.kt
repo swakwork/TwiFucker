@@ -13,18 +13,18 @@ object JsonTimelineEntryHook : BaseHook() {
         get() = "JsonNotificationsTabHook"
 
     override fun init() {
-        val jsonTimelineEntryClass =
+        val jsonNotificationEntryClass =
             loadClass("com.twitter.model.json.notificationstab")
-        val jsonTimelineEntryMapperClass =
+        val jsonNotiicationEntryMapperClass =
             loadClass("com.twitter.model.json.notificationstab\$\$JsonObjectMapper")
 
         val entryIdField =
-            FieldFinder.fromClass(jsonTimelineEntryClass).filterByType(String::class.java).first()
+            FieldFinder.fromClass(jsonNotificationEntryClass).filterByType(String::class.java).first()
         val contentField =
-            FieldFinder.fromClass(jsonTimelineEntryClass).filter { type.isInterface }.first()
+            FieldFinder.fromClass(jsonNotificationEntryClass).filter { type.isInterface }.first()
 
-        MethodFinder.fromClass(jsonTimelineEntryMapperClass).filterByName("_parse")
-            .filterByReturnType(jsonTimelineEntryClass).first().createHook {
+        MethodFinder.fromClass(jsonNotiicationEntryMapperClass).filterByName("_parse")
+            .filterByReturnType(jsonNotificationEntryClass).first().createHook {
                 afterMeasure(name) { param ->
                     param.result ?: return@afterMeasure
                     // val entryId = entryIdField.get(param.result) as String
