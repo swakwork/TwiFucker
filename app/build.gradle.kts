@@ -57,13 +57,13 @@ fun findInPath(executable: String): String? {
 }
 
 android {
-    namespace = "com.swak.twifucker"
+    namespace = "icu.nullptr.twifucker"
     compileSdk = 33
     ndkVersion = "25.2.9519653"
     buildToolsVersion = "33.0.2"
 
     defaultConfig {
-        applicationId = "com.swak.twifucker"
+        applicationId = "icu.nullptr.twifucker"
         minSdk = 24
         targetSdk = 33
         versionCode = gitCommitCount
