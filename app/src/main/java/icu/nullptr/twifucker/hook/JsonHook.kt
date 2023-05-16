@@ -11,6 +11,7 @@ import icu.nullptr.twifucker.forEach
 import icu.nullptr.twifucker.forEachIndexed
 import icu.nullptr.twifucker.modulePrefs
 import icu.nullptr.twifucker.writeJsonLog
+import icu.nullptr.twifucker.writeJsonLog2
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -450,9 +451,9 @@ object JsonHook : BaseHook() {
         try {
             val json = JSONObject(content)
             
-            // json.jsonGetNotifications()?.tweetsForEach {notifications ->
-            //     writeJsonLog(notifications.toString()+"")
-            // }
+            json.jsonGetNotifications()?.tweetsForEach {notifications ->
+                writeJsonLog2(notifications.toString()+"")
+            }
 
             json.jsonGetTweets()?.tweetsForEach { tweet ->
                 tweet.tweetCheckAndRemove()

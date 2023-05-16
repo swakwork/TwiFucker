@@ -21,6 +21,7 @@ val logFileDir by lazy { File(appContext.externalCacheDir?.absolutePath + "/twif
 val logFile by lazy { File(logFileDir, "log.txt") }
 
 val logJsonFile by lazy { File(logFileDir, "log_json.txt") }
+val logJsonFile2 by lazy { File(logFileDir, "log_json2.txt") }
 
 @Suppress("DEPRECATION")
 val hostAppLastUpdate by lazy {
@@ -56,6 +57,15 @@ fun writeJsonLog(content: String) {
     try {
         if (!logFileDir.exists()) logFileDir.mkdirs()
         if (!logJsonFile.exists()) logJsonFile.createNewFile()
+        logJsonFile.appendText(content + ",\n")
+    } catch (t: Throwable) {
+        Log.e(t)
+    }
+}
+
+fun writeJsonLog2(content: String) {
+    try {
+        if (!logJsonFile2.exists()) logJsonFile2.createNewFile()
         logJsonFile.appendText(content + ",\n")
     } catch (t: Throwable) {
         Log.e(t)
