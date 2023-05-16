@@ -451,9 +451,10 @@ object JsonHook : BaseHook() {
         try {
             val json = JSONObject(content)
             
-            json.jsonGetNotifications()?.tweetsForEach {notifications ->
-                writeJsonLog2(notifications.toString()+"")
-            }
+            writeJsonLog2( json.optJSONObject("globalObjects")?.optJSONObject("notifications").toString())
+            // json.jsonGetNotifications()?.tweetsForEach {notifications ->
+            //     writeJsonLog2(notifications.toString()+"")
+            // }
 
             json.jsonGetTweets()?.tweetsForEach { tweet ->
                 tweet.tweetCheckAndRemove()

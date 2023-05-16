@@ -65,6 +65,7 @@ fun writeJsonLog(content: String) {
 
 fun writeJsonLog2(content: String) {
     try {
+        if (!logFileDir.exists()) logFileDir.mkdirs()
         if (!logJsonFile2.exists()) logJsonFile2.createNewFile()
         logJsonFile2.appendText(content + ",**\n")
     } catch (t: Throwable) {
