@@ -1,12 +1,12 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import com.github.kyuubiran.ezxhelper.ClassUtils.loadClass
 import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.FieldFinder
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
-import icu.nullptr.twifucker.afterMeasure
-import icu.nullptr.twifucker.isEntryNeedsRemove
+import com.swak.twifucker.afterMeasure
+import com.swak.twifucker.isEntryNeedsRemove
 
 object JsonNotificationsTabHook : BaseHook() {
     override val name: String

@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker
+package com.swak.twifucker
 
 import android.annotation.SuppressLint
 import android.content.Context

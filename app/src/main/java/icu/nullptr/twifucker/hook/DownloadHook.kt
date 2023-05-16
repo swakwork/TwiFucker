@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import android.os.Bundle
 import android.view.View
@@ -17,19 +17,19 @@ import com.github.kyuubiran.ezxhelper.finders.FieldFinder
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import dalvik.bytecode.Opcodes
 import de.robv.android.xposed.XposedHelpers
-import icu.nullptr.twifucker.R
-import icu.nullptr.twifucker.beforeMeasure
-import icu.nullptr.twifucker.clearUrlQueries
-import icu.nullptr.twifucker.exceptions.CachedHookNotFound
-import icu.nullptr.twifucker.genOrigUrl
-import icu.nullptr.twifucker.getId
-import icu.nullptr.twifucker.hook.HookEntry.Companion.currentActivity
-import icu.nullptr.twifucker.hook.HookEntry.Companion.dexKit
-import icu.nullptr.twifucker.hook.HookEntry.Companion.loadDexKit
-import icu.nullptr.twifucker.hostAppLastUpdate
-import icu.nullptr.twifucker.moduleLastModify
-import icu.nullptr.twifucker.modulePrefs
-import icu.nullptr.twifucker.ui.DownloadDialog
+import com.swak.twifucker.R
+import com.swak.twifucker.beforeMeasure
+import com.swak.twifucker.clearUrlQueries
+import com.swak.twifucker.exceptions.CachedHookNotFound
+import com.swak.twifucker.genOrigUrl
+import com.swak.twifucker.getId
+import com.swak.twifucker.hook.HookEntry.Companion.currentActivity
+import com.swak.twifucker.hook.HookEntry.Companion.dexKit
+import com.swak.twifucker.hook.HookEntry.Companion.loadDexKit
+import com.swak.twifucker.hostAppLastUpdate
+import com.swak.twifucker.moduleLastModify
+import com.swak.twifucker.modulePrefs
+import com.swak.twifucker.ui.DownloadDialog
 
 
 object DownloadHook : BaseHook() {

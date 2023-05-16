@@ -1,4 +1,4 @@
--keep class icu.nullptr.twifucker.hook.HookEntry
+-keep class com.swak.twifucker.hook.HookEntry
 -keepclasseswithmembers class me.iacn.biliroaming.utils.DexHelper {
    native <methods>;
    long token;

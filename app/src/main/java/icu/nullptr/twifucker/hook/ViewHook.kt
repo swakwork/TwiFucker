@@ -1,11 +1,11 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import android.view.View
 import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
-import icu.nullptr.twifucker.getId
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.getId
+import com.swak.twifucker.modulePrefs
 
 object ViewHook : BaseHook() {
     override val name: String

@@ -1,3 +1,3 @@
-package icu.nullptr.twifucker.data
+package com.swak.twifucker.data
 
 data class TwitterItem(val key: String, var showing: Boolean)

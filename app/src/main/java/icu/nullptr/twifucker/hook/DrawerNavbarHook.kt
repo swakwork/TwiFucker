@@ -1,20 +1,20 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import com.github.kyuubiran.ezxhelper.ClassUtils.loadClass
 import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import dalvik.bytecode.Opcodes
-import icu.nullptr.twifucker.afterMeasure
-import icu.nullptr.twifucker.data.TwitterItem
-import icu.nullptr.twifucker.exceptions.CachedHookNotFound
-import icu.nullptr.twifucker.hook.HookEntry.Companion.dexKit
-import icu.nullptr.twifucker.hook.HookEntry.Companion.loadDexKit
-import icu.nullptr.twifucker.hostAppLastUpdate
-import icu.nullptr.twifucker.moduleLastModify
-import icu.nullptr.twifucker.modulePrefs
-import icu.nullptr.twifucker.ui.SettingsDialog
-import icu.nullptr.twifucker.ui.SettingsDialog.Companion.PREF_HIDDEN_BOTTOM_NAVBAR_ITEMS
+import com.swak.twifucker.afterMeasure
+import com.swak.twifucker.data.TwitterItem
+import com.swak.twifucker.exceptions.CachedHookNotFound
+import com.swak.twifucker.hook.HookEntry.Companion.dexKit
+import com.swak.twifucker.hook.HookEntry.Companion.loadDexKit
+import com.swak.twifucker.hostAppLastUpdate
+import com.swak.twifucker.moduleLastModify
+import com.swak.twifucker.modulePrefs
+import com.swak.twifucker.ui.SettingsDialog
+import com.swak.twifucker.ui.SettingsDialog.Companion.PREF_HIDDEN_BOTTOM_NAVBAR_ITEMS
 
 object DrawerNavbarHook : BaseHook() {
     override val name: String

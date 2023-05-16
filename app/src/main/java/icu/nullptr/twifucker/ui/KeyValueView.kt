@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.content.Context
 import android.text.InputType
@@ -7,7 +7,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Switch
-import icu.nullptr.twifucker.R
+import com.swak.twifucker.R
 
 class KeyValueView(context: Context) : CustomLayout(context) {
     var isBoolean: Boolean = true

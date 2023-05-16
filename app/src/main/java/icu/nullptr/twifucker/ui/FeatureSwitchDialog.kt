@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -8,8 +8,8 @@ import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import androidx.recyclerview.widget.RecyclerView
 import com.github.kyuubiran.ezxhelper.EzXHelper.addModuleAssetPath
-import icu.nullptr.twifucker.R
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.R
+import com.swak.twifucker.modulePrefs
 import org.json.JSONArray
 
 class FeatureSwitchDialog(context: Context) : Dialog(context) {

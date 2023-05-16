@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import com.github.kyuubiran.ezxhelper.ClassUtils.loadClass
 import com.github.kyuubiran.ezxhelper.EzXHelper
@@ -6,14 +6,14 @@ import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import de.robv.android.xposed.XC_MethodHook
-import icu.nullptr.twifucker.afterMeasure
-import icu.nullptr.twifucker.exceptions.CachedHookNotFound
-import icu.nullptr.twifucker.forEach
-import icu.nullptr.twifucker.hook.HookEntry.Companion.dexKit
-import icu.nullptr.twifucker.hook.HookEntry.Companion.loadDexKit
-import icu.nullptr.twifucker.hostAppLastUpdate
-import icu.nullptr.twifucker.moduleLastModify
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.afterMeasure
+import com.swak.twifucker.exceptions.CachedHookNotFound
+import com.swak.twifucker.forEach
+import com.swak.twifucker.hook.HookEntry.Companion.dexKit
+import com.swak.twifucker.hook.HookEntry.Companion.loadDexKit
+import com.swak.twifucker.hostAppLastUpdate
+import com.swak.twifucker.moduleLastModify
+import com.swak.twifucker.modulePrefs
 import org.json.JSONArray
 import org.json.JSONException
 

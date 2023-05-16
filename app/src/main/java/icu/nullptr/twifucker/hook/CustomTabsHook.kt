@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import android.app.Activity
 import android.content.Intent
@@ -10,14 +10,14 @@ import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import de.robv.android.xposed.XposedHelpers
-import icu.nullptr.twifucker.beforeMeasure
-import icu.nullptr.twifucker.exceptions.CachedHookNotFound
-import icu.nullptr.twifucker.hook.HookEntry.Companion.dexKit
-import icu.nullptr.twifucker.hook.HookEntry.Companion.loadDexKit
-import icu.nullptr.twifucker.hostAppLastUpdate
-import icu.nullptr.twifucker.hostPrefs
-import icu.nullptr.twifucker.moduleLastModify
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.beforeMeasure
+import com.swak.twifucker.exceptions.CachedHookNotFound
+import com.swak.twifucker.hook.HookEntry.Companion.dexKit
+import com.swak.twifucker.hook.HookEntry.Companion.loadDexKit
+import com.swak.twifucker.hostAppLastUpdate
+import com.swak.twifucker.hostPrefs
+import com.swak.twifucker.moduleLastModify
+import com.swak.twifucker.modulePrefs
 
 object CustomTabsHook : BaseHook() {
     override val name: String

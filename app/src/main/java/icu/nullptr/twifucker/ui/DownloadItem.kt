@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.content.Context
 import android.graphics.Color
@@ -6,7 +6,7 @@ import android.util.TypedValue
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageButton
 import android.widget.TextView
-import icu.nullptr.twifucker.R
+import com.swak.twifucker.R
 
 class DownloadItem(context: Context) : CustomLayout(context) {
 

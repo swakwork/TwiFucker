@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import android.app.Activity
 import android.app.Application
@@ -12,11 +12,11 @@ import com.github.kyuubiran.ezxhelper.finders.MethodFinder
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.IXposedHookZygoteInit
 import de.robv.android.xposed.callbacks.XC_LoadPackage
-import icu.nullptr.twifucker.hook.activity.MainActivityHook
-import icu.nullptr.twifucker.hook.activity.SettingsHook
-import icu.nullptr.twifucker.logFile
-import icu.nullptr.twifucker.logFileDir
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.hook.activity.MainActivityHook
+import com.swak.twifucker.hook.activity.SettingsHook
+import com.swak.twifucker.logFile
+import com.swak.twifucker.logFileDir
+import com.swak.twifucker.modulePrefs
 import io.luckypray.dexkit.DexKitBridge
 import java.lang.ref.WeakReference
 

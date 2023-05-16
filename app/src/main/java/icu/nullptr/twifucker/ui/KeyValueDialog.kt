@@ -1,10 +1,10 @@
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.app.AlertDialog
 import android.content.Context
 import com.github.kyuubiran.ezxhelper.EzXHelper.addModuleAssetPath
-import icu.nullptr.twifucker.R
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.R
+import com.swak.twifucker.modulePrefs
 import org.json.JSONArray
 import org.json.JSONObject
 

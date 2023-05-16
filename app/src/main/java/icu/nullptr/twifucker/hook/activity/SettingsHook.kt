@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook.activity
+package com.swak.twifucker.hook.activity
 
 import android.app.Activity
 import android.widget.ImageView
@@ -9,16 +9,16 @@ import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.ConstructorFinder
 import com.github.kyuubiran.ezxhelper.finders.FieldFinder
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
-import icu.nullptr.twifucker.exceptions.CachedHookNotFound
-import icu.nullptr.twifucker.getId
-import icu.nullptr.twifucker.hook.BaseHook
-import icu.nullptr.twifucker.hook.HookEntry.Companion.dexKit
-import icu.nullptr.twifucker.hook.HookEntry.Companion.loadDexKit
-import icu.nullptr.twifucker.hostAppLastUpdate
-import icu.nullptr.twifucker.moduleLastModify
-import icu.nullptr.twifucker.modulePrefs
-import icu.nullptr.twifucker.replaceMeasure
-import icu.nullptr.twifucker.ui.SettingsDialog
+import com.swak.twifucker.exceptions.CachedHookNotFound
+import com.swak.twifucker.getId
+import com.swak.twifucker.hook.BaseHook
+import com.swak.twifucker.hook.HookEntry.Companion.dexKit
+import com.swak.twifucker.hook.HookEntry.Companion.loadDexKit
+import com.swak.twifucker.hostAppLastUpdate
+import com.swak.twifucker.moduleLastModify
+import com.swak.twifucker.modulePrefs
+import com.swak.twifucker.replaceMeasure
+import com.swak.twifucker.ui.SettingsDialog
 import io.luckypray.dexkit.descriptor.member.DexMethodDescriptor
 
 object SettingsHook : BaseHook() {

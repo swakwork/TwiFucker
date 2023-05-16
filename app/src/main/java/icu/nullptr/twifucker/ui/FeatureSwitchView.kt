@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.content.Context
 import android.graphics.Color
@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import icu.nullptr.twifucker.R
+import com.swak.twifucker.R
 
 class FeatureSwitchView(context: Context) : CustomLayout(context) {
 

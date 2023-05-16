@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 abstract class BaseHook {
     var isInit: Boolean = false

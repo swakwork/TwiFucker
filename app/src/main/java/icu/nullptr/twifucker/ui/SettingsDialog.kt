@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -19,11 +19,11 @@ import com.github.kyuubiran.ezxhelper.AndroidLogger
 import com.github.kyuubiran.ezxhelper.EzXHelper.addModuleAssetPath
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.misc.Utils.restartHostApp
-import icu.nullptr.twifucker.*
-import icu.nullptr.twifucker.hook.DrawerNavbarHook.bottomNavbarItems
-import icu.nullptr.twifucker.hook.DrawerNavbarHook.drawerItems
-import icu.nullptr.twifucker.hook.HookEntry.Companion.isLogcatProcessInitialized
-import icu.nullptr.twifucker.hook.HookEntry.Companion.logcatProcess
+import com.swak.twifucker.*
+import com.swak.twifucker.hook.DrawerNavbarHook.bottomNavbarItems
+import com.swak.twifucker.hook.DrawerNavbarHook.drawerItems
+import com.swak.twifucker.hook.HookEntry.Companion.isLogcatProcessInitialized
+import com.swak.twifucker.hook.HookEntry.Companion.logcatProcess
 
 class SettingsDialog(context: Context) : AlertDialog.Builder(context) {
 

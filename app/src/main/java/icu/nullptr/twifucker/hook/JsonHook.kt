@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import com.github.kyuubiran.ezxhelper.ClassUtils.loadClass
 import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
@@ -6,12 +6,12 @@ import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.FieldFinder
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder.`-Static`.methodFinder
 import de.robv.android.xposed.XC_MethodHook
-import icu.nullptr.twifucker.beforeMeasure
-import icu.nullptr.twifucker.forEach
-import icu.nullptr.twifucker.forEachIndexed
-import icu.nullptr.twifucker.modulePrefs
-import icu.nullptr.twifucker.writeJsonLog
-import icu.nullptr.twifucker.writeJsonLog2
+import com.swak.twifucker.beforeMeasure
+import com.swak.twifucker.forEach
+import com.swak.twifucker.forEachIndexed
+import com.swak.twifucker.modulePrefs
+import com.swak.twifucker.writeJsonLog
+import com.swak.twifucker.writeJsonLog2
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject

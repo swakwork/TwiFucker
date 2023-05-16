@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.hook
+package com.swak.twifucker.hook
 
 import android.app.Activity
 import android.content.ClipData
@@ -9,7 +9,7 @@ import com.github.kyuubiran.ezxhelper.ClassUtils.loadClass
 import com.github.kyuubiran.ezxhelper.HookFactory.`-Static`.createHook
 import com.github.kyuubiran.ezxhelper.Log
 import com.github.kyuubiran.ezxhelper.finders.MethodFinder
-import icu.nullptr.twifucker.beforeMeasure
+import com.swak.twifucker.beforeMeasure
 
 object UrlHook : BaseHook() {
     override val name: String

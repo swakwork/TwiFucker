@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
@@ -19,8 +19,8 @@ import com.github.kyuubiran.ezxhelper.AndroidLogger
 import com.github.kyuubiran.ezxhelper.EzXHelper.addModuleAssetPath
 import com.github.kyuubiran.ezxhelper.EzXHelper.appContext
 import com.github.kyuubiran.ezxhelper.Log
-import icu.nullptr.twifucker.R
-import icu.nullptr.twifucker.modulePrefs
+import com.swak.twifucker.R
+import com.swak.twifucker.modulePrefs
 import java.io.File
 import java.io.FileOutputStream
 import java.net.HttpURLConnection

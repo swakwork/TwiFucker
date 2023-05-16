@@ -1,4 +1,4 @@
-package icu.nullptr.twifucker.ui
+package com.swak.twifucker.ui
 
 import android.content.Context
 import android.view.View
