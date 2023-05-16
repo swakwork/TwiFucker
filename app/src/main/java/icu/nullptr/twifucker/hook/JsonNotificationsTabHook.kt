@@ -15,7 +15,7 @@ object JsonNotificationsTabHook : BaseHook() {
     override fun init() {
         val jsonNotificationEntryClass =
             loadClass("com.twitter.model.json.notificationstab.JsonNotification")
-        val jsonNotiicationEntryMapperClass =
+        val jsonNoticationEntryMapperClass =
             loadClass("com.twitter.model.json.notificationstab.JsonNotification\$\$JsonObjectMapper")
 
         val entryIdField =
@@ -24,7 +24,7 @@ object JsonNotificationsTabHook : BaseHook() {
             FieldFinder.fromClass(jsonNotificationEntryClass).filter { type.isInterface }.first()
         Log.i("SwakN: "+entryIdField)
         Log.i("SwakB: "+contentField)
-        MethodFinder.fromClass(jsonNotiicationEntryMapperClass).filterByName("_parse")
+        MethodFinder.fromClass(jsonNoticationEntryMapperClass).filterByName("_parse")
             .filterByReturnType(jsonNotificationEntryClass).first().createHook {
                 afterMeasure(name) { param ->
                     param.result ?: return@afterMeasure
