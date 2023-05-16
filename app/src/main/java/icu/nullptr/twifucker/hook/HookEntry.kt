@@ -117,7 +117,6 @@ class HookEntry : IXposedHookZygoteInit, IXposedHookLoadPackage {
                                 JsonProfileRecommendationModuleResponseHook,
                                 JsonFleetsTimelineResponseHook,
                                 JsonTimelineModuleHook,
-                                JsonNotificationsTabHook,
                             )
                         )
                     }

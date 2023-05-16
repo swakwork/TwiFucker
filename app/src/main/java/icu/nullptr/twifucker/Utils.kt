@@ -66,7 +66,7 @@ fun writeJsonLog(content: String) {
 fun writeJsonLog2(content: String) {
     try {
         if (!logJsonFile2.exists()) logJsonFile2.createNewFile()
-        logJsonFile.appendText(content + ",\n")
+        logJsonFile2.appendText(content + ",**\n")
     } catch (t: Throwable) {
         Log.e(t)
     }
